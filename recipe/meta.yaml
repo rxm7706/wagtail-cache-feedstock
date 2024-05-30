@@ -1,13 +1,13 @@
 {% set name = "wagtail-cache" %}
-{% set version = "2.3.0" %}
+{% set version = "2.4.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/wagtail-cache-{{ version }}.tar.gz
-  sha256: fbb0c04f8238ed688b5f58ad8644366d017d0ebdcaf84d12be33ad85624f0a25
+  url: https://github.com/coderedcorp/wagtail-cache/archive/v{{ version }}.tar.gz
+  sha256: cbf3bec8f2457cdc6632bbc2b7746f4506f5cb2f196fe06384490c3b49901baa
 
 build:
   noarch: python
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.8
-    - wagtail >=3.0,<6
+    - wagtail >=3.0,<7
 
 test:
   imports:
